@@ -22,13 +22,13 @@
         {
             Console.WriteLine("Enter your list (Each number has space between them): ");
             Console.WriteLine("Press 0 to exit: ");
-            
+
             while (true) //Tao vong lap sao cho user chi ra duoc ket qua khi nhap gia tri dung
             {
                 {
                     //Truong hop user nhan 0 de thoat chuong trinh
                     string input = Console.ReadLine();
-                    if (int.TryParse(input, out int exitvalue) && exitvalue == 0 )
+                    if (int.TryParse(input, out int exitvalue) && exitvalue == 0)
                     {
                         Environment.Exit(exitvalue);
                         break;
@@ -46,20 +46,22 @@
                                  .ToArray();
                             int index = MaxValue(numbers);
                             Console.WriteLine("The greatest's position is: " + index);
+                            //Nguoi dung tiep tuc nhap neu muon kiem tra day so khac, nhan 0 neu muon thoat
                             Console.WriteLine("Check more list ? (Press 0 to exit) : ");
                             continue;
                         }
+                        //Neu day so nhap vao co loai ky tu khac ngoai so nguyen => bat nhap lai
                         else
                         {
                             Console.WriteLine("List has invalid value / Please enter again: ");
                         }
                     }
-                    
+
                 }
-                
+
             }
-           
-            
+
+
         }
     }
 }
